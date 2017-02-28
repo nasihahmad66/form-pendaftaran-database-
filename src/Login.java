@@ -133,9 +133,9 @@ public class Login extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         user=tUser.getText();
         pass=tPass.getText();
-        String SQL = "INSERT INTO tb_akun(username, password ) VALUES ('"+user+"','"+pass+"')";
-        int hasil = koneksiDB.execute(SQL);
         if (!"".equals(user)&&!"".equals(pass)) {
+            String SQL = "INSERT INTO tb_akun(username, password ) VALUES ('"+user+"','"+pass+"')";
+            int hasil = koneksiDB.execute(SQL);
             if (hasil==1) {
                 JOptionPane.showMessageDialog(rootPane, "Anda berhasil signup");
             } else{
